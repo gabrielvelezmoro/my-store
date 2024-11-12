@@ -7,7 +7,19 @@ const Catalog: CollectionConfig = {
   admin: {
     useAsTitle: "email",
   },
-  fields: Produtos.fields,
+  fields: [
+    {
+      name: "total",
+      type: "number",
+      required: true,
+    },
+    {
+      name: "Produtos",
+      type: "relationship",
+      relationTo: "Produtos",
+      required: true,
+    },
+  ],
 };
 
 export default Catalog;
