@@ -1,10 +1,17 @@
+import { isLoggedIn } from "../access/loggedIn";
 import { CollectionConfig } from "payload/types";
 
-const Produtos: CollectionConfig = {
+const Products: CollectionConfig = {
   slug: "Produtos",
-  auth: true,
   admin: {
-    useAsTitle: "email",
+    useAsTitle: "name",
+  },
+  access: {
+    // Anyone logged in can create
+    create: isLoggedIn,
+    update: isLoggedIn,
+    read: isLoggedIn,
+    delete: isLoggedIn,
   },
   fields: [
     { name: "nome", type: "text", required: true },
@@ -15,4 +22,4 @@ const Produtos: CollectionConfig = {
   ],
 };
 
-export default Produtos;
+export default Products;
