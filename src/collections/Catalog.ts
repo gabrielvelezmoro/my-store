@@ -12,6 +12,7 @@ const Catalog: CollectionConfig = {
       name: "produtos",
       type: "relationship",
       relationTo: "produtos",
+      hasMany: true,
       required: true,
     },
   ],
