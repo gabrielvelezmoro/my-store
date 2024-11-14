@@ -2,9 +2,9 @@ import { isLoggedIn } from "../access/loggedIn";
 import { CollectionConfig } from "payload/types";
 
 const Products: CollectionConfig = {
-  slug: "Produtos",
+  slug: "produtos",
   admin: {
-    useAsTitle: "name",
+    useAsTitle: "nome",
   },
   access: {
     // Anyone logged in can create

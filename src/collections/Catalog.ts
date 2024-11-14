@@ -1,7 +1,7 @@
 import { CollectionConfig } from "payload/types";
 
 const Catalog: CollectionConfig = {
-  slug: "Catalogo",
+  slug: "catalogo",
   fields: [
     {
       name: "total",
@@ -9,9 +9,9 @@ const Catalog: CollectionConfig = {
       required: true,
     },
     {
-      name: "Produtos",
+      name: "produtos",
       type: "relationship",
-      relationTo: "Produtos",
+      relationTo: "produtos",
       required: true,
     },
   ],
