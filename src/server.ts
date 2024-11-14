@@ -1,10 +1,14 @@
 import express from "express";
 import payload from "payload";
+import swaggerUi from "swagger-ui-express";
+import swaggerOutput from "./swagger.json";
 
 require("dotenv").config();
 const app = express();
 
 // Redirect root to Admin panel
+
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerOutput));
 app.get("/", (_, res) => {
   res.redirect("/admin");
 });
